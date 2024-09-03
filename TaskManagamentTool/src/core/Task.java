@@ -37,7 +37,7 @@ public class Task {
         return priority;
     }
     public void displayTaskDetail(){
-        System.out.println("Task:"+title+"\nDescription"+description+"\nDeadline"+deadline+"\nPriority"+priority);
+        System.out.println("Task: "+title+"\nDescription: "+description+"\nDeadline: "+deadline+"\nPriority: "+priority);
     }
     
 }
