@@ -5,7 +5,7 @@ public class PersonalTask extends Task {
         super(title, description, description, priority);
     }
     public void displayTaskDetail(){
-        System.out.println("[Work Task]");
+        System.out.println("[Personal Task]");
         super.displayTaskDetail();
     }
 }

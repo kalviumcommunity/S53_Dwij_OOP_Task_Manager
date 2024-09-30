@@ -11,12 +11,16 @@ public class Main {
         taskManager.displayTaskDetail();
 
         //initializing a task array to showcase the array of object concept 
-        Task[] tasks = new Task[3];
+        Task[] tasks = new Task[5];
 
         //Creating sample object to add inside the array
         tasks[0]= new Task("Car wash","Take the car out ot get a car wash","2024-09-08",2);
         tasks[1]= new Task("Doctor appointment","Go to the doctor to get your regular checkup","2024-09-05",1);
         tasks[2]= new Task("Shopping grosseries","go out to buy vegitables and fruits","2024-09-10",3);
+
+        //Dynamic memory allocation 
+        tasks[3] = new Task("Gym Workout", "Go to the gym for a workout session", "2024-09-06", 4);
+        tasks[4] = new Task("Finish Project Report", "Complete and submit the project report", "2024-09-07", 5);
 
         for(Task task:tasks){
             task.displayTaskDetail();
