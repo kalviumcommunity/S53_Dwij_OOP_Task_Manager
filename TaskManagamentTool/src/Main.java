@@ -26,6 +26,7 @@ public class Main {
             task.displayTaskDetail();
             System.out.println("-----------------------");
         }
+        System.out.println("Total tasks created: "+Task.getTaskCount());
 
 
     }
