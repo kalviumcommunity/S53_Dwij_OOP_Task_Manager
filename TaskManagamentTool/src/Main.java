@@ -22,6 +22,20 @@ public class Main {
         tasks[3] = new Task("Gym Workout", "Go to the gym for a workout session", "2024-09-06", 4);
         tasks[4] = new Task("Finish Project Report", "Complete and submit the project report", "2024-09-07", 5);
 
+        //Making a user object
+        User user = new User("john_doe", "john@example.com", "Admin");
+
+        // Display initial user details
+        user.displayUserDetails();
+        
+        // Change role using a mutator
+        user.setRole("Regular User");
+        System.out.println("Updated Role: " + user.getRole());
+
+        // Display updated user details
+        user.displayUserDetails();
+
+        // Display all tasks
         for(Task task:tasks){
             task.displayTaskDetail();
             System.out.println("-----------------------");
