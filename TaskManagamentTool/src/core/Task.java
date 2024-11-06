@@ -8,12 +8,21 @@ public class Task {
     private static int taskCount = 0;
     private static int nextTaskID = 1;
 
-    public Task(String title,String description,String deadline, int priority){
-        this.title= title;
+    // Default Constructor
+    public Task() {
+        this.title = "Untitled";
+        this.description = "No Description";
+        this.deadline = "No Deadline";
+        this.priority = 0;
+        taskCount++;
+    }
+
+    // Parameterized Constructor
+    public Task(String title, String description, String deadline, int priority) {
+        this.title = title;
         this.description = description;
-        this.deadline= deadline;
-        this.priority = priority;   
-        this.taskId = nextTaskID++;
+        this.deadline = deadline;
+        this.priority = priority;
         taskCount++;
     }
     public static int getTaskCount(){

@@ -5,11 +5,19 @@ public class User {
      private String email;
      private String role;
  
-     public User(String username, String email, String role) {
-         this.username = username;
-         this.email = email;
-         this.role = role;
-     }
+     // Default Constructor - Initializes the user as a "guest"
+    public User() {
+        this.username = "Guest";
+        this.email = "guest@example.com";
+        this.role = "guest";
+    }
+
+    // Parameterized Constructor - Initializes the user with specified details
+    public User(String username, String email, String role) {
+        this.username = username;
+        this.email = email;
+        this.role = role;
+    }
  
      public String getUsername() {
          return username;
