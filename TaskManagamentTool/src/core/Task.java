@@ -25,6 +25,11 @@ public class Task {
         this.priority = priority;
         taskCount++;
     }
+    // Simplified Constructor - Only title and priority; assigns default values to others
+    public Task(String title, int priority) {
+        this(title, "No description provided", "No deadline specified", priority);
+    }
+    
     public static int getTaskCount(){
             return taskCount;
     }
