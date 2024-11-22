@@ -8,4 +8,7 @@ public class WorkTask extends Task {
         System.out.println("[Work Task]");
         super.displayTaskDetail();
     }
+    public void sendReminder() {
+        System.out.println("Reminder: Complete the work task '" + getTitle() + "' before " + getDeadline());
+    }
 }

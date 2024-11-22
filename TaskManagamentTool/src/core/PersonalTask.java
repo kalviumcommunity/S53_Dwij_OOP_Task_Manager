@@ -8,4 +8,7 @@ public class PersonalTask extends Task {
         System.out.println("[Personal Task]");
         super.displayTaskDetail();
     }
+    public void sendReminder() {
+        System.out.println("Reminder: Complete your personal task '" + getTitle() +"' by " + getDeadline());
+    }
 }
