@@ -22,6 +22,14 @@ public class Main {
         tasks[3] = new Task("Gym Workout", "Go to the gym for a workout session", "2024-09-06", 4);
         tasks[4] = new Task("Finish Project Report", "Complete and submit the project report", "2024-09-07", 5);
 
+        Task defaultTask = new Task();
+        defaultTask.displayTaskDetail();
+
+        //HighPriorityWorkTask
+        HighPriorityWorkTask highPriorityWorkTask = new HighPriorityWorkTask("Finish Urgent Report", "Urgent financial report", "2024-10-15", 1, "Finance", "High Priority: Complete ASAP!");
+        System.out.println("\nHigh Priority Work Task Details:");
+        highPriorityWorkTask.displayTaskDetail();
+
         //Making a user object
         User user = new User("john_doe", "john@example.com", "Admin");
 
