@@ -1,15 +1,24 @@
 package core;
 
 public class HighPriorityWorkTask extends WorkTask {
-    private String alertMessage;
+    private String priorityMessage;
 
-    public HighPriorityWorkTask(String title, String description, String deadline, int priority, String projectName, String alertMessage) {
-        super(title, description, deadline, priority, projectName);
-        this.alertMessage = alertMessage;
+    public HighPriorityWorkTask(String title, String description, String deadline, int priority, String priorityMessage) {
+        super(title, description, deadline, priority);
+        this.priorityMessage = priorityMessage;
     }
 
+    public String getPriorityMessage() {
+        return priorityMessage;
+    }
+
+    public void setPriorityMessage(String priorityMessage) {
+        this.priorityMessage = priorityMessage;
+    }
+
+    @Override
     public void displayTaskDetail() {
         super.displayTaskDetail();
-        System.out.println("Alert: " + alertMessage);
+        System.out.println("Priority Message: " + priorityMessage);
     }
 }

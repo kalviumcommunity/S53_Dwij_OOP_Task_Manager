@@ -1,5 +1,6 @@
 package core;
-public class Task {
+
+public abstract class Task {
     private String title;
     private String description;
     private String deadline;
@@ -14,6 +15,7 @@ public class Task {
         this.description = "No Description";
         this.deadline = "No Deadline";
         this.priority = 0;
+        this.taskId = nextTaskID++;
         taskCount++;
     }
 
@@ -23,47 +25,64 @@ public class Task {
         this.description = description;
         this.deadline = deadline;
         this.priority = priority;
+        this.taskId = nextTaskID++;
         taskCount++;
     }
-    // Simplified Constructor - Only title and priority; assigns default values to others
+
+    // Simplified Constructor - Only title and priority; assigns default values to
+    // others
     public Task(String title, int priority) {
         this(title, "No description provided", "No deadline specified", priority);
     }
-    
-    public static int getTaskCount(){
-            return taskCount;
+
+    public static int getTaskCount() {
+        return taskCount;
     }
-    public int getTaskId(){
+
+    public int getTaskId() {
         return taskId;
     }
-    public void setTitle(String title){
+
+    public void setTitle(String title) {
         this.title = title;
     }
-    public String getTitle(){
+
+    public String getTitle() {
         return title;
     }
-    public void setDescription(String description){
-        this.description= description;
+
+    public void setDescription(String description) {
+        this.description = description;
     }
-    public String getDescription(){
+
+    public String getDescription() {
         return description;
 
     }
-    public void setDeadline(String deadline){
+
+    public void setDeadline(String deadline) {
         this.deadline = deadline;
     }
-    public String getDeadline(){
+
+    public String getDeadline() {
         return deadline;
     }
-    public void setPriority(int priority){
+
+    public void setPriority(int priority) {
         this.priority = priority;
     }
-    public int getPriority(){
+
+    public int getPriority() {
         return priority;
     }
-    public void displayTaskDetail(){
-        System.out.println("Task ID: "+taskId);
-        System.out.println("Task: "+title+"\nDescription: "+description+"\nDeadline: "+deadline+"\nPriority: "+priority);
+
+    // Abstract method (virtual function) for sending reminders
+    public abstract void sendReminder();
+
+    public void displayTaskDetail() {
+        System.out.println("Task ID: " + taskId);
+        System.out.println("Task: " + title + "\nDescription: " + description + "\nDeadline: " + deadline
+                + "\nPriority: " + priority);
     }
-    
+
 }
