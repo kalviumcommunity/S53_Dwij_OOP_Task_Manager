@@ -25,6 +25,10 @@ public class Main {
         Task defaultTask = new Task();
         defaultTask.displayTaskDetail();
 
+        // Using simplified constructor
+        Task simpleTask = new Task("Prepare Presentation", 2);
+        simpleTask.displayTaskDetail(); 
+
         //HighPriorityWorkTask
         HighPriorityWorkTask highPriorityWorkTask = new HighPriorityWorkTask("Finish Urgent Report", "Urgent financial report", "2024-10-15", 1, "Finance", "High Priority: Complete ASAP!");
         System.out.println("\nHigh Priority Work Task Details:");
